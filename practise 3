@@ -1,0 +1,28 @@
+// SPDX-License-Identifier: MIT
+//mini calculator
+
+pragma solidity ^0.8.30;
+
+contract Sum {
+    int public summing;
+
+
+    
+    function sum(int a, int b) public pure returns(int){ 
+        return a+b;
+            }
+
+    
+    function min( int a, int b, int total) public pure returns(int, string memory){
+        total= a-b;
+        if (total  >=  0)
+        {
+        return (total, "valid");
+        }
+        else 
+        {
+            return (0, "invalid");
+        }
+    }
+    
+}
