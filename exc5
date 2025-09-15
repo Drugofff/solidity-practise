@@ -1,0 +1,34 @@
+pragma solidity ^0.8.0;
+
+
+contract FixedsizedArrays {
+ uint[3] public numbers =[1,2,69];
+
+ bytes1 public b1;
+ bytes2 public b2;
+ bytes3 public b3;
+ bytes15 public b4;
+  bytes16[4] public b7;
+
+ //up to bytes32
+
+
+    function setElement (uint index, uint value) public {
+
+        numbers[index] = value;
+    }
+    function getLenght() public view returns(uint){
+
+        return numbers.length;
+    }
+
+    function setBytesArray () public  {
+        b1 = 'a';
+        b2 = 'ab';
+        b3 = 'abc';
+        b4 = 'i love monoad';
+        b7 = [b1, b2, b3, b4];
+
+
+    }
+}
