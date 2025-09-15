@@ -1,0 +1,20 @@
+pragma solidity ^0.8.0;
+
+contract exc2{
+
+string public name;
+bytes32 public name1;
+
+    function Setname(string memory AddName) public returns(string memory) {
+        name=AddName;
+       
+        
+    }
+
+    function ReturnNameToByte()public returns(bytes32){
+
+        name1=bytes32(bytes (name));
+        return name1;
+    }
+
+    }
