@@ -1,0 +1,15 @@
+pragma solidity ^0.8.0;
+
+contract exc1 {
+    uint public x; // Declare as state variable
+
+    constructor(uint y) {
+        x = y; // Initialize state variable
+    }
+
+    function Inter(uint _x) public pure returns (uint) {
+        // Since it's `view`, we can't modify `x` here anyway.
+        // Just return the input (will return only one time. For moltiple times needs lloop).
+        return _x;
+    }
+}
