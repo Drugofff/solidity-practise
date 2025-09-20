@@ -1,0 +1,31 @@
+pragma solidity ^0.8.0;
+
+contract token {
+
+ string  public name;
+ string  public symbol;
+ uint256 public   initialSupply;
+
+    constructor(string memory  _name, string memory _symbol, uint256 totalSupply){
+        name = _name;
+        symbol= _symbol;
+        initialSupply= totalSupply;
+    
+    }
+    function mint(uint256 amount) public {
+        require(amount >0, "Amount must be greater than 0");
+        initialSupply = initialSupply + amount;
+        
+    }
+
+    function burn (uint256 amount)  public {
+        require(amount >0, "Amount must be greater than 0");
+        require(amount <= initialSupply, "Insufficient balance");
+        initialSupply = initialSupply - amount;
+
+    }
+
+
+
+
+}
